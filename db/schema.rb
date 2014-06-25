@@ -11,17 +11,18 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140624140415) do
+ActiveRecord::Schema.define(version: 20140625002208) do
 
   create_table "reminders", force: true do |t|
     t.string   "title"
-    t.datetime "date"
     t.integer  "time"
     t.string   "status"
     t.string   "content"
     t.string   "phone"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
+    t.date     "date"
   end
 
   create_table "users", force: true do |t|

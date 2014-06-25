@@ -1,2 +1,23 @@
 <h1> Create a Reminder </h1>
 
+<%= form_for @reminder do |f| %>
+  <p> <%=f.label :title %> <br>
+      <%=f.text_field :title %>
+  </p>
+
+  <p> <%=f.label :message %> <br>
+      <%=f.text_area :content %>
+  </p>
+
+  <p> <%=f.label :phonenumber %> <br>
+      <%=f.text_field :phone %>
+  </p>
+
+  <p> <%=f.label :date %> <br>
+      <%=f.text_field :date, class: "choosedate" %>
+  </p>
+
+  <p><%=f.submit "Submit" %></p>
+
+
+<% end %>
