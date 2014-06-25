@@ -1,18 +1,19 @@
-require 'dotenv'
-Dotenv.load
-require 'twilio-ruby'
+require 'active_support/all'
 
-# put your own credentials here
-account_sid = ENV['TWILIO_SECRET']
-auth_token = ENV['TWILIO_AUTH']
+def get_date
+"30/Nov/2009 16:29".to_datetime
+end
 
-# set up a client to talk to the Twilio REST API
-@client = Twilio::REST::Client.new account_sid, auth_token
+def difference
+@date = DateTime.parse('jun 26 2014')
 
-def send_message
-@client.account.messages.create(
-  :from => '+19186750208',
-  :to => '+18085617268',
-  :body => 'Im watching you'
-)
+
+@date_parsed = @date.to_s
+@date_parsed[10..13] = " "
+@date_parsed[16..-1] = ""
+@parsed = Time.parse(@date_parsed)
+
+
+@difference = @parsed - Time.now
+@minutes = @difference / 60
 end

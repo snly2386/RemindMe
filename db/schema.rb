@@ -11,11 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140625002208) do
+ActiveRecord::Schema.define(version: 20140625014428) do
 
   create_table "reminders", force: true do |t|
     t.string   "title"
-    t.integer  "time"
     t.string   "status"
     t.string   "content"
     t.string   "phone"
@@ -23,6 +22,9 @@ ActiveRecord::Schema.define(version: 20140625002208) do
     t.datetime "updated_at"
     t.integer  "user_id"
     t.date     "date"
+    t.string   "mystery"
+    t.time     "time"
+    t.string   "tim"
   end
 
   create_table "users", force: true do |t|
