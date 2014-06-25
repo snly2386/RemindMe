@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'hirb'
 gem 'devise'
 gem 'dotenv-rails', :groups => [:development, :test]
 gem 'twilio-ruby', '~> 3.11'

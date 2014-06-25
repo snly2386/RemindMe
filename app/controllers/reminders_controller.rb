@@ -4,7 +4,7 @@ class RemindersController < ApplicationController
   end
 
   def create
-    @reminder = Reminder.create(:title => params[:title], :content => params[:content], :phone => params[:phone], :date => params[:date])
+    @reminder = Reminder.create(:date => params[:date])
     flash[:created] = "You've scheduled a reminder"
     redirect_to "/users/#{current_user.id}/reminders/#{@reminder.id}"
   end
@@ -16,5 +16,11 @@ class RemindersController < ApplicationController
   def show
     @reminder = Reminder.find(params[:id])
   end
+
+  # private
+
+  # def reminder_params
+  #   params.require(:reminder).permit(:title, :content, :phone, :date)
+  # end
 
 end
