@@ -1,0 +1,9 @@
+<h1> Show all Reminders for <%=current_user.email%> </h1>
+
+
+<%=@reminders.each do |reminder| %>
+<h3><%=reminder.title%></h3>
+<h3><%=reminder.date%></h3>
+<h3><%=reminder.tim%> </h3>
+<h3><%=reminder.status%></h3>
+<% end %>

@@ -1,3 +1,5 @@
-<h1> Welcome, <%=current_user.email%></h1>
+<h1> Welcome, <%=current_user.username%></h1>
+
+<%=link_to("Not #{current_user.username}?", destroy_user_session_path, :method => "delete") %>
 
 <%=link_to("Set an Appointment", "/users/#{current_user.id}/reminders/new")%>

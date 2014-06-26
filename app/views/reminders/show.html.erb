@@ -5,3 +5,8 @@
 <h2> When: <%=@reminder.mystery%></h2>
 <h2> Phonenumber : <%=@reminder.phone%> </h2>
 <h2> Time: <%=@reminder.tim %> </h2>
+<h2> Status: <%=@reminder.status %> </h2>
+
+<%=link_to("show all reminders", "/users/#{current_user.id}/reminders")%>
+<%=link_to("Not #{current_user.username}?", destroy_user_session_path, :method => "delete") %>
+
