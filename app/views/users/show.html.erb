@@ -1,3 +1,106 @@
+
+
+    <!-- Header Wrapper -->
+    <script type="text/javascript"> <%=render "/home/jstuff/jquery.dropotron.min.js" %> </script>
+    <script type="text/javascript"> <%=render "/home/jstuff/config.js" %> </script>
+    <script type="text/javascript"> <%=render "/home/jstuff/skel.min.js" %> </script>
+    <script type="text/javascript"> <%=render "/home/jstuff/skelpanels.min.js" %> </script>
+      
+      <div id="header-wrapper">
+        <div class="container">
+          <div class="row">
+            <div class="12u">
+            
+              <!-- Header -->
+                <section id="header">
+                  
+                  <!-- Logo -->
+                    <h1><a href="#">Remind Me</a></h1>
+                  
+                  <!-- Nav -->
+                    <nav id="nav">
+                      <ul>
+                        <li class="current_page_item"><a href="index.html">Home</a></li>
+                        <li><a href="/users/sign_out">Sign Out</a></li>
+                        <li><a href="#">Placeholder</a></li>
+                        <li><a href="#">Placeholder</a></li>
+                        <li><a href="#">Placeholder</a></li>
+                      </ul>
+                    </nav>
+
+                </section>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="12u">
+
+              <!-- Banner -->
+                <section id="banner">
+               
+                    <span class="image image-full"><img src="http://aboutpubliseek.wpengine.netdna-cdn.com/influence/wp-content/uploads/sites/5/2013/06/Old-Spiral-Notepad.jpg" alt="" /></span>
+                    <header class="buzz-out">
+                      <h2>Remind Me</h2>
+                      <span class="byline">A text message scheduler</span>
+                    </header>
+               
+                </section>
+
+            </div>
+          </div>
+          <div class="row">
+            <div class="12u">
+                
+              <!-- Intro -->
+                <section id="intro">
+                
+                  <div>
+                    <div class="row">
+                      <div class="4u">
+                        <section class="first">
+                          <span class="pennant"><span class="fa fa-cog"></span></span>
+                          <header>
+                            <h2>Remind</h2>
+                          </header>
+                          <p>Write a reminder.</p>
+                        </section>
+                      </div>
+                      <div class="4u">
+                        <section class="middle">
+                          <span class="pennant pennant-alt"><span class="fa fa-flash"></span></span>
+                          <header>
+                            <h2>Date</h2>
+                          </header>
+                          <p>Set a time and date</p>
+                        </section>
+                      </div>
+                      <div class="4u">
+                        <section class="last">
+                          <span class="pennant pennant-alt2"><span class="fa fa-star"></span></span>
+                          <header>
+                            <h2>Text Message</h2>
+                          </header>
+                          <p>Receive a Text Message at selected date/time with reminder.</p>
+                        </section>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="actions">
+                    <a href="/users/sign_in" class="button big">Get Started</a>
+                    <a href="#" class="button alt big">Learn More</a>
+                  </div>
+                
+                </section>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    
+
+
 <h1> Welcome, <%=current_user.username%></h1>
 
 <%=link_to("Not #{current_user.username}?", destroy_user_session_path, :method => "delete") %>
